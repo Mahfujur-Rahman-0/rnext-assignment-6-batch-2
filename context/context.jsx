@@ -7,21 +7,12 @@ import { createContext, useState } from "react";
 export const DataContext = createContext();
 
 export default function ContextProvider({ children }) {
-	const [categoriesdata, setCategoriesData] = useState({});
-	const [recipesData, setRecipesData] = useState({});
+	const [Id, setId] = useState();
+
 	console.log("categories", categories);
 	console.log("recipes", recipes);
 	return (
-		<DataContext.Provider
-			value={{
-				categoriesdata,
-				setCategoriesData,
-				recipesData,
-				setRecipesData,
-				categories,
-				recipes,
-			}}
-		>
+		<DataContext.Provider value={{ Id, setId, categories, recipes }}>
 			{children}
 		</DataContext.Provider>
 	);

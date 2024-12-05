@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
 								</li>
 							</ul>
 							<div className="flex items-center space-x-4">
-								<a href="#" className="hover:text-orange-500">
+								<Link href="/" className="hover:text-orange-500">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										className="h-6 w-6"
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
 											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
 										/>
 									</svg>
-								</a>
+								</Link>
 							</div>
 						</nav>
 					</header>
@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
 						<div className="container mx-auto px-4">
 							<div className="grid md:grid-cols-4 gap-8">
 								<div>
-									<a href="/index.html" className="text-3xl font-bold">
+									<Link href="/index.html" className="text-3xl font-bold">
 										<Image
 											alt="lws-kitchen"
 											width={101}
@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
 											src="/lws-kitchen.png"
 											className="h-10"
 										/>
-									</a>
+									</Link>
 									<p className="text-gray-600 mt-2 text-sm">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 										do eiusmod tempor incididunt ut labore et dolore magna
@@ -105,36 +105,36 @@ export default function RootLayout({ children }) {
 									<h4 className="font-semibold mb-4">LWS Kitchen</h4>
 									<ul className="space-y-2">
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												About us
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Careers
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Contact us
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Feedback
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</div>
@@ -142,36 +142,36 @@ export default function RootLayout({ children }) {
 									<h4 className="font-semibold mb-4">Legal</h4>
 									<ul className="space-y-2">
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Terms
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Conditions
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Cookies
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Copyright
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</div>
@@ -179,36 +179,36 @@ export default function RootLayout({ children }) {
 									<h4 className="font-semibold mb-4">Follow</h4>
 									<ul className="space-y-2">
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Facebook
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Twitter
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Instagram
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												href="#"
 												className="text-gray-600 hover:text-orange-500"
 											>
 												Youtube
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</div>

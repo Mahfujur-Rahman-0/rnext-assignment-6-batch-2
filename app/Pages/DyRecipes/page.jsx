@@ -1,6 +1,7 @@
 "use client";
 import useDataContext from "@/context/useDataContext";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Recipes() {
 	const { categories, recipes } = useDataContext();
@@ -12,7 +13,7 @@ export default function Recipes() {
 					<h1 className="text-4xl font-bold mb-2">
 						Desserts{" "}
 						<span className="text-gray-500 text-2xl font-normal">
-							{`(98 Recipes)`}
+							{`(${recipes.length} Recipes)`}
 						</span>
 					</h1>
 					<p className="text-gray-600">
@@ -28,30 +29,34 @@ export default function Recipes() {
 					.sort((a, b) => a.published_date.localeCompare(b.published_date))
 					.slice(0, 8)
 					.map((e) => (
-						<div
-							key={e.category_id}
-							className="bg-white rounded-lg overflow-hidden shadow-md"
-						>
-							<Image
-								width={352}
-								height={192}
-								src={`/thumbs/${e.thumbnail}`}
-								alt="Decadent Raspberry and Cream Cake"
-								className="w-full h-48 object-cover"
-							/>
-							<div className="p-4">
-								<h2 className="font-semibold text-lg mb-2">{e.title}</h2>
-							</div>
+						<Link key={e.itmId + "46421g35"} href={`/Pages/${e.itmId}`}>
+							<div className="bg-white rounded-lg overflow-hidden shadow-md">
+								<Image
+									width={352}
+									height={192}
+									src={`/thumbs/${e.thumbnail}`}
+									alt="Decadent Raspberry and Cream Cake"
+									className="w-full h-48 object-cover"
+								/>
+								<div className="p-4 ">
+									<h2 className="h-[55px] overflow-hidden font-semibold text-lg mb-2">
+										{e.title}
+									</h2>
+								</div>
 
-							{categories.map(
-								(ee) =>
-									ee.id === e.category_id && (
-										<p key={1 + ee.id} className="text-gray-600">
-											{ee.name}
-										</p>
-									)
-							)}
-						</div>
+								{categories.map(
+									(ee) =>
+										ee.id === e.category_id && (
+											<p
+												key={ee.id + "454546598"}
+												className="text-gray-600 pl-6 pb-3"
+											>
+												{ee.name}
+											</p>
+										)
+								)}
+							</div>
+						</Link>
 					))}
 
 				{/* <!-- Repeat the above div structure for the remaining dessert items --> */}
